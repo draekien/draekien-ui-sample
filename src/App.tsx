@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router } from "react-router-dom";
-import { Banner, Button, Navbar, Text, TextArea, Textbox } from "draekien-ui";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
+import { Banner, Button, Navbar, Text, TextArea, Textbox, useToastContext } from "draekien-ui";
 
 function App() {
   const [data, setData] = React.useState({
@@ -11,11 +11,16 @@ function App() {
     phone: "",
     message: "",
   });
+  const toastContext = useToastContext();
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
 
     console.log("Form data: ", data);
+    toastContext.success({
+      title: "Form submitted",
+      message: "Check the console logs for form data",
+    });
   };
 
   const handleDataChange = (e: any) => {

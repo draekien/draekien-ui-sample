@@ -7,9 +7,12 @@ import { DraekienUi, ToastContainer, ToastProvider } from "draekien-ui";
 
 ReactDOM.render(
   <React.StrictMode>
+    {/** enable the Draekien-UI theme */}
     <DraekienUi>
+      {/** enable toast context */}
       <ToastProvider>
         <App />
+        {/** add container for rendering toasts */}
         <ToastContainer offsetTop="10%" />
       </ToastProvider>
     </DraekienUi>
