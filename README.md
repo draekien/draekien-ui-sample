@@ -13,6 +13,10 @@ Checkout `src/index.tsx` and `src/App.tsx` to see the code in action.
 
 ## Setup
 
-Do the below in your app's `index.tsx` to enable the UI library
+Checkout `src/index.tsx` for your basic setup with toasts enabled. To disable toasts, use
 
-![index.tsx](screenshots/index_tsx.png)
+```jsx
+<DraekienUi useToastContext={false}>
+  <App />
+</DraekienUi>
+```
