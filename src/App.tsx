@@ -11,16 +11,25 @@ function App() {
     phone: "",
     message: "",
   });
+
+  const [submitLoading, setSubmitLoading] = React.useState(false);
+
   const toastContext = useToastContext();
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
 
-    console.log("Form data: ", data);
-    toastContext.success({
-      title: "Form submitted",
-      message: "Check the console logs for form data",
-    });
+    setSubmitLoading(true);
+
+    setTimeout(() => {
+      console.log("Form data: ", data);
+
+      setSubmitLoading(false);
+      toastContext.success({
+        title: "Form submitted",
+        message: "Check the console logs for form data",
+      });
+    }, 1000);
   };
 
   const handleDataChange = (e: any) => {
@@ -58,7 +67,7 @@ function App() {
             <Textbox id="email" label="email" icon="mail" onChange={handleDataChange} value={data.email} type="email" fullWidth />
             <Textbox id="phone" label="phone" icon="phone" onChange={handleDataChange} value={data.phone} type="phone" fullWidth />
             <TextArea id="message" label="message" onChange={handleDataChange} value={data.message} required fullWidth />
-            <Button type="submit" fullWidth>
+            <Button type="submit" isLoading={submitLoading} fullWidth>
               Submit
             </Button>
           </form>
