@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { DraekienUi, ToastContainer, ToastProvider } from "draekien-ui";
+import { DraekienUi } from "draekien-ui";
 
 ReactDOM.render(
   <React.StrictMode>

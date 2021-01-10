@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { Banner, Button, Navbar, Text, TextArea, Textbox, useToastContext } from "draekien-ui";
 
 function App() {
