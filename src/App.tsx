@@ -49,18 +49,20 @@ function App() {
             </li>
           </ul>
         </Navbar>
-        <form onSubmit={handleSubmit}>
-          <Text variant="title">Example Contact Form</Text>
-          <Banner variant="information" message="This form does not actually submit any information. Check the console logs for form contents on submission." />
-          <Textbox id="firstname" label="first name" onChange={handleDataChange} value={data.firstname} required fullWidth />
-          <Textbox id="lastname" label="last name" onChange={handleDataChange} value={data.lastname} required fullWidth />
-          <Textbox id="email" label="email" icon="mail" onChange={handleDataChange} value={data.email} type="email" fullWidth />
-          <Textbox id="phone" label="phone" icon="phone" onChange={handleDataChange} value={data.phone} type="phone" fullWidth />
-          <TextArea id="message" label="message" onChange={handleDataChange} value={data.message} required fullWidth />
-          <Button type="submit" fullWidth>
-            Submit
-          </Button>
-        </form>
+        <div className="body__container">
+          <form className="example-form" onSubmit={handleSubmit}>
+            <Text variant="title">Example Contact Form</Text>
+            <Banner variant="information" message="This form does not actually submit any information. Check the console logs for form contents on submission." />
+            <Textbox id="firstname" label="first name" onChange={handleDataChange} value={data.firstname} required fullWidth />
+            <Textbox id="lastname" label="last name" onChange={handleDataChange} value={data.lastname} required fullWidth />
+            <Textbox id="email" label="email" icon="mail" onChange={handleDataChange} value={data.email} type="email" fullWidth />
+            <Textbox id="phone" label="phone" icon="phone" onChange={handleDataChange} value={data.phone} type="phone" fullWidth />
+            <TextArea id="message" label="message" onChange={handleDataChange} value={data.message} required fullWidth />
+            <Button type="submit" fullWidth>
+              Submit
+            </Button>
+          </form>
+        </div>
       </div>
     </Router>
   );

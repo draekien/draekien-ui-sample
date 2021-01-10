@@ -19,6 +19,14 @@
   margin-right: 10rem;
 }
 
+.body__container {
+  margin-top: 4rem;
+}
+
+.example-form {
+  margin: 2rem 0;
+}
+
 @media only screen and (max-width: 990px) {
   .nav__container {
     height: "100%";
